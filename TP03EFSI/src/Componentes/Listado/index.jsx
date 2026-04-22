@@ -1,7 +1,8 @@
+import Cita from "../cita";
 const Listado= () =>{
     return(
         <>
-<h1>ADMINISTRA TUS CITAS</h1>
+<h2>ADMINISTRA TUS CITAS</h2>
 <Cita
   nombre="Firulais"
   dueño="Juan Pérez"

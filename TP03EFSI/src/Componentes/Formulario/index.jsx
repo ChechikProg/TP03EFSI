@@ -1,7 +1,7 @@
 
-const Formulario =(dni) => {
+const Formulario =() => {
 return(
-
+<div>
     <form>
   <label>Nombre Mascota</label>
   <input
@@ -50,6 +50,7 @@ return(
     Agregar Cita
   </button>
 </form>
+</div>
 )
 }
 export default Formulario;

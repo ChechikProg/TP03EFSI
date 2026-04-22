@@ -1,15 +1,13 @@
-
-const Cita = ({ nomMascota, dueñoMascota, fecha, hora, sintomaMascota }) => {
-
+const Cita = ({ nombre, dueño, fecha, hora, sintoma }) => {
   return (
-
-   <div class="cita">
-              <p>Mascota: <span>{nomMascota}</span></p>
-              <p>Dueño: <span>{dueñoMascota}</span></p>
-              <p>Fecha: <span>{fecha}</span></p>
-              <p>Hora: <span>{hora}</span></p>
-              <p>Sintomas: <span>{sintomaMascota}</span></p><button class="button elimnar u-full-width">Eliminar ×</button>
-            </div>
+    <div className="cita">
+      <p>Mascota: <span>{nombre}</span></p>
+      <p>Dueño: <span>{dueño}</span></p>
+      <p>Fecha: <span>{fecha}</span></p>
+      <p>Hora: <span>{hora}</span></p>
+      <p>Sintomas: <span>{sintoma}</span></p>
+      <button className="button eliminar u-full-width">Eliminar ×</button>
+    </div>
   );
 };
 

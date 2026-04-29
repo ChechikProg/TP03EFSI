@@ -1,32 +1,21 @@
-import Cita from "../cita";
-const Listado= () =>{
-    return(
-        <>
-<h2>ADMINISTRA TUS CITAS</h2>
-<Cita
-  nombre="Firulais"
-  dueño="Juan Pérez"
-  fecha="2026-04-20"
-  hora="10:30"
-  sintoma="Falta de apetito"
-/>
-
-<Cita
-  nombre="Mishi"
-  dueño="Carla Gómez"
-  fecha="2026-04-22"
-  hora="15:00"
-  sintoma="Dolor en la pata"
-/>
-
-<Cita
-  nombre="Rocky"
-  dueño="Lucas Fernández"
-  fecha="2026-04-25"
-  hora="09:15"
-  sintoma="Tos constante"
-/>
-</>
-)
+import Cita from '../cita'
+import './Listado.css'
+const Listado = ({ citas, eliminarCita }) => {
+  return (
+    <div>
+      <h2>ADMINISTRA TUS CITAS</h2>
+      {citas.length === 0 ? (
+        <p className="sin-citas">No hay citas registradas. Agregá una desde el formulario.</p>
+      ) : (
+        citas.map(cita => (
+          <Cita
+            key={cita.id}
+            cita={cita}
+            eliminarCita={eliminarCita}
+          />
+        ))
+      )}
+    </div>
+  )
 }
-export default Listado;
+export default Listado

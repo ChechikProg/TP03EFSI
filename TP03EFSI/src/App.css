@@ -3,7 +3,6 @@
 html {
   min-height: 100%;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -12,8 +11,6 @@ body {
   min-height: 100vh;
   padding-bottom: 5rem;
 }
-
-/* ── Layout principal 2 columnas ── */
 .contenedor-app {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -21,15 +18,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
-@media (max-width: 768px) {
-  .contenedor-app {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ── Títulos ── */
+} 
 h1, h2 {
   color: white;
   padding: 2.5rem 0 1.5rem;
@@ -40,134 +29,7 @@ h1, h2 {
   font-size: 2.8rem;
   margin: 0;
 }
-
-/* ── Título principal centrado arriba ── */
 .titulo-principal {
   grid-column: 1 / -1;
   text-align: center;
-}
-
-/* ── Labels ── */
-label {
-  color: white;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 4px;
-  margin-top: 12px;
-  font-size: 0.9rem;
-}
-
-/* ── Inputs generales ── */
-input[type="text"],
-input[type="date"],
-input[type="time"],
-textarea {
-  width: 100%;
-  padding: 8px 10px;
-  background-color: #fff;
-  border: 1px solid #D1D1D1;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-input[type="date"],
-input[type="time"] {
-  height: 38px;
-}
-
-textarea {
-  height: 100px;
-  resize: vertical;
-}
-
-/* ── Botón Agregar Cita (cyan) ── */
-.button-primary,
-button[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-top: 1.2rem;
-  background-color: #00bcd4;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.button-primary:hover,
-button[type="submit"]:hover {
-  background-color: #0097a7;
-}
-
-/* ── Cards de cita ── */
-.cita {
-  padding: 1.5rem 1.8rem;
-  background: white;
-  border-bottom: 1px solid #e1e1e1;
-  color: black;
-  margin-bottom: 0;
-}
-
-.cita:first-of-type {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.cita:last-of-type {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  border-bottom: none;
-}
-
-.cita p {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
-}
-
-.cita p span {
-  font-weight: normal;
-}
-
-/* ── Botón Eliminar (blanco con borde) ── */
-.button.eliminar {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  margin-top: 1rem;
-  background-color: white;
-  color: #333;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  cursor: pointer;
-  text-align: center;
-  transition: background 0.2s;
-}
-
-.button.eliminar:hover {
-  background-color: #f5f5f5;
-}
-
-/* ── Alerta error ── */
-.alerta-error {
-  background-color: white;
-  color: red;
-  padding: 1rem;
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: 'Staatliches', cursive;
-  border-radius: 4px;
-  margin-bottom: 1rem;
 }

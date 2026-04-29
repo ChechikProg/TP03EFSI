@@ -1,12 +1,18 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import Formulario from './Componentes/Formulario'
 import Listado from './Componentes/Listado'
 
 function App() {
+  const [citas, setCitas] = useState([])
+  const agregarCita = (nuevaCita) => {
+    setCitas(citasActuales => [...citasActuales, nuevaCita])
+  }
+  const eliminarCita = (id) => {
+    if (window.confirm('¿Estás seguro de que querés eliminar esta cita?')) {
+      setCitas(citasActuales => citasActuales.filter(cita => cita.id !== id))
+    }
+  }
   return (
     <div>
       <div className="contenedor-app">
@@ -14,14 +20,15 @@ function App() {
 
         <div>
           <h2>CREAR MI CITA</h2>
-          <Formulario />
+          <Formulario agregarCita={agregarCita} />
         </div>
 
         <div>
-          <Listado />
+          <Listado citas={citas} eliminarCita={eliminarCita} />
         </div>
       </div>
     </div>
   )
 }
+
 export default App

@@ -1,0 +1,51 @@
+
+
+.cita {
+  padding: 1.5rem 1.8rem;
+  background: white;
+  border-bottom: 1px solid #e1e1e1;
+  color: #333;
+}
+
+.cita:first-of-type {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.cita:last-of-type {
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-bottom: none;
+}
+
+.cita p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.campo {
+  font-weight: bold;
+}
+
+.btn-eliminar {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 1rem;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-eliminar:hover {
+  background-color: #ffe0e0;
+  border-color: #e57373;
+  color: #c62828;
+}

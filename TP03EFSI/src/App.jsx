@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Formulario from './Componentes/Formulario'
 import Listado from './Componentes/Listado'
 
 function App() {
-  const [citas, setCitas] = useState([])
+  const [citas, setCitas] = useState(() => JSON.parse(localStorage.getItem('citas')) || [])
+  useEffect(() => { localStorage.setItem('citas', JSON.stringify(citas)) }, [citas])
+
   const agregarCita = (nuevaCita) => {
     setCitas(citasActuales => [...citasActuales, nuevaCita])
   }
